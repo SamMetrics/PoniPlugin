@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+  "name": "Orange Extension [1.0]",
+  "version": "2.1.1",
+  "description": "Eina interna pel departament de Data",
+  
+  "icons": { "16": "imatges/cometesOrange16.png"  },
+  
+  "permissions": [
+	"contextMenus",
+	"tabs",
+	"clipboardWrite",
+	"activeTab",
+	"https://*/*",
+	"http://*/*",
+	"storage"],
+ 
+  "browser_action": {
+	"browser_style": true,
+    "default_icon": {
+      "16": "imatges/cometesOrange16.png"
+    }
+  },
+  
+  "sidebar_action": {
+  "default_title": "Docus Sidebar",
+  "default_panel": "background.html",
+  "default_icon": "/imatges/cometesOrange16.png"
+},
+  
+  "background": {
+	"page" : "background.html"},
+  
+  "commands": {
+	"docus": {
+      "suggested_key": { "default": "Alt+Q"},
+      "description": "Crawl Url"
+    }},
+    
+    "content_scripts": [{
+      "matches": ["*://*/*"],
+     "js":["docusPanel.js", "background.js"]}]
+}

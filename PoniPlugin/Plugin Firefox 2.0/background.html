@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Orange Extension - Docus</title>
+	</head>
+	<body> 
+		<div class="menu">
+			
+		  <input type="checkbox" name="Select All" id="selectAll"/><label for="Select All">Select All </label>
+			<p class="spacebar">|</p>
+		   
+			<button id="buttonCopyOrange" type="button" value="Copy to Orange  "  tooltiptext="Copy the content to the Mass Insert Textarea"/>Copy to Orange  </button>
+			<p class="spacebar">|</p>
+		  
+			<button id="buttonCopyClipboard" type="button" value="Copy to Clipboard  " tooltiptext="Promt a window with the selected heading"/>Copy to Clipboard  </button>
+		  <p class="spacebar">|</p>
+		  
+		  <!--
+		  <button id="buttonCopyOrange" type="button" value="Copy to Orange  " onchange="orangeImport()" tooltiptext="Copy the content to the Mass Insert Textarea"/>Copy to Orange  </button>
+		  <button id="buttonCopyClipboard" type="button" value="Copy to Clipboard  " oncommand="filters.copyClipBoardButton(event)" tooltiptext="Promt a window with the selected heading"/>Copy to Clipboard  </button>
+		  
+		  <button id="buttonSave" type="button" value="Save" tooltiptext="Save urls captured into a file"/>Save</button> 
+		  <input value="Save" type="file" multiple>
+		  <p class="spacebar">|</p>-->
+		  
+			<button id="buttonClear" type="button" value="Clear" tooltiptext="Delete all content of the active panel"/>Clear</button> 
+		  <p class="spacebar">|</p>
+		  
+		  <button id="buttonCrawl" type="button" value="Crawl" tooltiptext="Crawl url"/><img src="./imatges/cometesOrange16.png"/></button>
+		  <p class="spacebar">|</p>
+		  
+		  <button id="buttonRemove" type="button" value="Remove"  tooltiptext="Remove selected lines"/><img src="./imatges/delete.png"/></button>   
+		  <p class="spacebar">|</p>
+		  
+		  <input id="totalLines" type="text" size="3" value="0"/>
+		  
+			<select id="comboA" onchange="getComboA(this)">
+				<option value="">Select combo</option>
+				<option value="Value1">Text1</option>
+				<option value="Value2">Text2</option>
+				<option value="Value3">Text3</option>
+			</select>			
+		</div>
+
+		<div class="textareaCSS" id="urlAreaId" style="background:lightgrey;"></div>
+
+
+
+
+		<script src="docusPanel.js"></script>
+		<script src="jquery.js"></script>
+		<script src="loadCSS.js"></script>
+		<script src="background.js"></script>
+	</body>
+</html>
